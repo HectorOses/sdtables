@@ -72,7 +72,7 @@ sites:
 The following code will create a new workbook ```text.xlsx``` based on this schema and example input data;
 
 ```
-import tables
+import sdtables
 import yaml
 from openpyxl import Workbook
 
@@ -134,7 +134,7 @@ schema = dict_schema['module']['schemas']['sites']
 data = dict_schema['module']['data']['sites']
 
 
-tables.add_schema_table_to_worksheet(ws, name, schema, data=data, table_style='TableStyleMedium2')
+sdtables.add_schema_table_to_worksheet(ws, name, schema, data=data, table_style='TableStyleMedium2')
 
 wb.save('test.xlsx')
 ```
